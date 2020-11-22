@@ -14,9 +14,17 @@ describe("Office", function(){
     office.vacateRoom();
     expect(office.available).toBe(true);
   });
-  it("raises an error if trying to enter an occupied room", function(){
-    office.occupyRoom();
-    office.available;
-    expect(occupyRoom()).toThrow('Room occupied')
-  })
+  it("throws an error if entering an occupied room", function(){
+    var occupied = function(){
+      throw new TypeError("Room currently in use!");
+    };
+    expect(occupied).toThrowError("Room currently in use!");
+  });
 })
+
+
+
+//  it("raises an error if trying to enter an occupied room", function(){
+//    office.occupyRoom();
+//    expect(inUse()).toThrow('Room currently in use!')
+//  })

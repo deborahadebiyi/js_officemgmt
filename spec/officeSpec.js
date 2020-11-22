@@ -20,11 +20,7 @@ describe("Office", function(){
     };
     expect(occupied).toThrowError("Room currently in use!");
   });
+  it("meeting rooms have a name", function(){
+    expect(office.name).toEqual('Boardroom 1');
+  })
 })
-
-
-
-//  it("raises an error if trying to enter an occupied room", function(){
-//    office.occupyRoom();
-//    expect(inUse()).toThrow('Room currently in use!')
-//  })

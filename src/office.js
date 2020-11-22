@@ -2,6 +2,7 @@ class Office {
 
   constructor(){
     this.available = true;
+    this.name = 'Boardroom 1';
   };
 
   occupyRoom(){

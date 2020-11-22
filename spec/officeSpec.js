@@ -4,5 +4,8 @@ class Office {
     this.available = true;
   }
 
+  occupyRoom(){
+    this.available = false;
+  }
 
 }

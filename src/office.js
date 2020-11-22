@@ -9,5 +9,9 @@ describe("Office", function(){
   it("meeting room becomes unavailable when occupied", function(){
     office.occupyRoom();
     expect(office.available).toBe(false);
-  })
+  });
+  it("meeting room becomes available when vacant", function(){
+    office.vacateRoom();
+    expect(office.available).toBe(true);
+  });
 })

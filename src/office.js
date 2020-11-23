@@ -3,6 +3,8 @@ class Office {
   constructor(){
     this.available = true;
     this.name = 'Boardroom 1';
+    this.rooms = [];
+
   };
 
   occupyRoom(){
@@ -21,4 +23,8 @@ class Office {
       throw 'Room currently in use!';
     };
   };
+
+  addRoom(title, availability = true){
+    this.rooms.push({roomName: this.title, vacant: this.availability})
+  }
 }

@@ -22,5 +22,10 @@ describe("Office", function(){
   });
   it("meeting rooms have a name", function(){
     expect(office.name).toEqual('Boardroom 1');
+  });
+  it("office manager adds a new meeting room to office", function(){
+    office.addRoom(title, availability);
+    expect(office.rooms).toContain([{roomName: title, vacant: availability}]);
+
   })
 })
